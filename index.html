@@ -10,10 +10,26 @@
         body {
             transition: background 0.4s ease, color 0.4s ease;
         }
-        html { scroll-behavior: smooth; }
-        #services, #about, #contact, #kickstart { scroll-margin-top: 120px; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #services,
+        #about,
+        #contact,
+        #kickstart {
+            scroll-margin-top: 120px;
+        }
+
         @media (max-width: 768px) {
-            #services, #about, #contact, #kickstart { scroll-margin-top: 160px; }
+
+            #services,
+            #about,
+            #contact,
+            #kickstart {
+                scroll-margin-top: 160px;
+            }
         }
 
         .theme-toggle {
@@ -47,7 +63,7 @@
 <body class="prasara-body">
     <div class="container">
         <div class="navbar" id="navbar">
-            
+
             <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
                 ☰
             </button>
@@ -271,6 +287,49 @@
             </div>
         </div>
 
+        <footer class="footer" role="contentinfo" aria-label="Prasara footer">
+            <div class="footer-content">
+                <div class="details">
+                    <h3 class="footer-brand">Prasara</h3>
+                    <p class="footer-line">📍 Thrissur, Kerala, India</p>
+                    <p class="footer-line">📞 +91-9400578600</p>
+                    <p class="footer-line">✉️ <a href="mailto:PrasaraDigital@gmail.com"
+                            class="footer-link">PrasaraDigital@gmail.com</a></p>
+                </div>
+
+                <div class="footer-links">
+                    <nav aria-label="Footer navigation">
+                        <ul>
+                            <li><a class="footer-link" href="#services">Services</a></li>
+                            <li><a class="footer-link" href="#about">About</a></li>
+                            <li><a class="footer-link" href="#kickstart">Kickstart AI</a></li>
+                            <li><a class="footer-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="socials" aria-label="Social links">
+                    <a class="social-btn" href="#" aria-label="Instagram">
+                        <!-- keep using your svg markup; this uses currentColor so it adapts -->
+                        <svg width="26" height="26" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">[...]</svg>
+                    </a>
+                    <a class="social-btn" href="#" aria-label="LinkedIn">
+                        <svg width="26" height="26" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">[...]</svg>
+                    </a>
+                    <a class="social-btn" href="#" aria-label="Twitter">
+                        <svg width="26" height="26" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">[...]</svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Prasara. All rights reserved.</p>
+                <p class="made-with">Crafted with ♥ to help local businesses grow.</p>
+            </div>
+        </footer>
 
     </div>
     <script>
