@@ -495,7 +495,7 @@
   .pillar-card {
     width: 80vw;
     min-width: unset;
-    padding: 18px 10px 18px 10px;
+    padding: 18px 20px 18px 20px;
     margin-bottom: 18px;
     min-height: 320px;
     padding-bottom: 44px;
@@ -520,11 +520,12 @@
   .pillar-card__desc {
     font-size: 0.95rem;
     margin-bottom: 18px;
+    padding-bottom: 30px;
   }
 
   .pillar-card__icon {
-    left: 10px;
-    bottom: 15px;
+    left: 18px;
+    bottom: 23px;
     width: 36px;
     height: 36px;
     font-size: 1.1rem;
