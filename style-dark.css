@@ -54,6 +54,18 @@
   max-width: 90vw;
 }
 
+.imagelogo{
+  
+  height:12vh;
+  width:8vw;
+  margin-right: 0px !important;
+}
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
 /* Mobile menu toggle button */
 .mobile-menu-toggle {
   display: none;
@@ -78,6 +90,18 @@
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: block;
+  }
+
+  .imagelogo{
+    height:12vh;
+    width:16vw;
+    margin-right: 0px !important;
+  }
+
+  .brand{
+    display: flex;
+    align-items: center;
+    gap: 1px;
   }
 
   .navbar__links {
@@ -162,6 +186,18 @@
     height: auto;
     padding: 4px 45px;
     top: 15px;
+  }
+
+  .imagelogo{
+    height:12vh;
+    width:16vw;
+    margin-right: 0px !important;
+  }
+  
+  .brand{
+    display: flex;
+    align-items: center;
+    gap: 1px;
   }
 
   .navbar__title {

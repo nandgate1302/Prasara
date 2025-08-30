@@ -65,6 +65,19 @@
   position: relative;
 }
 
+.imagelogo{
+  
+  height:12vh;
+  width:8vw;
+  margin-right: 0px !important;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
 .navbar__links {
   display: flex;
   gap: 30px;
@@ -76,6 +89,17 @@
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: block;
+  }
+
+  .imagelogo{
+    height:12vh;
+    width:16vw;
+    margin-right: 0px !important;
+  }
+  .brand{
+    display: flex;
+    align-items: center;
+    gap: 1px;
   }
   
   .navbar__links {
@@ -160,6 +184,12 @@
     padding: 4px 45px;
     height: auto;
     top: 15px;
+  }
+
+  .imagelogo{
+    height:10vh;
+    width:16vw;
+    margin-right: 0px !important;
   }
   
   .navbar__title {
