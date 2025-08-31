@@ -68,8 +68,8 @@
                 ☰
             </button>
             <div class="brand"> 
-                <img class="imagelogo" src="/Images/Prasara Logo.png">
-                <span class="navbar__title">Prasara</span>
+            <img class="imagelogo" src="/images/Prasara Logo.png">
+            <span class="navbar__title">Prasara</span>
             </div>
             
             <div class="navbar__links" id="navbar-links">
@@ -412,6 +412,21 @@
                     if (window.innerWidth > 768) closeMenu();
                 });
             }
+
+            // New interactive background effect for dark mode
+            const body = document.querySelector('.prasara-body');
+            if (body) {
+                window.addEventListener('pointermove', (e) => {
+                    // Only apply effect if the dark theme is active
+                    if (themeStylesheet.getAttribute('href').includes(DARK_THEME)) {
+                        const { clientX, clientY } = e;
+                        const x = Math.round((clientX / window.innerWidth) * 100);
+                        const y = Math.round((clientY / window.innerHeight) * 100);
+                        body.style.setProperty('--mouse-x', x);
+                        body.style.setProperty('--mouse-y', y);
+                    }
+                });
+            }
         });
     </script>
 
@@ -420,3 +435,4 @@
 </body>
 
 </html>
+
