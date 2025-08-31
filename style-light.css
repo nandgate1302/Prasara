@@ -40,6 +40,7 @@
   box-shadow: 0 4px 24px 0 rgba(152, 146, 128, 0.1);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   padding: 10px 40px;
   position: fixed;
@@ -52,21 +53,9 @@
   max-width: 90vw;
 }
 
-/* Mobile menu toggle button */
-.mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: #292421;
-  padding: 8px;
-  z-index: 1001;
-  position: relative;
-}
+
 
 .imagelogo{
-  
   height:12vh;
   width:8vw;
   margin-right: 0px !important;
@@ -87,105 +76,24 @@
 
 /* Mobile navigation styles */
 @media (max-width: 768px) {
-  .mobile-menu-toggle {
-    display: block;
-  }
-
   .imagelogo{
     height:12vh;
     width:16vw;
     margin-right: 0px !important;
   }
+  
   .brand{
     display: flex;
     align-items: center;
     gap: 1px;
   }
   
-  .navbar__links {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-  }
-  
-  .navbar__links.show {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
   .navbar {
-    display: grid;
-    grid-template-columns: 36px 1fr 36px;
-    align-items: center;
-    justify-items: center;
-    height: auto;
-    min-height: 8.5vh;
-    padding: 10px 16px;
-    gap: 10px;
-    width: 85vw;
-    max-width: 360px;
-    transition: all 0.3s ease;
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    background: rgba(244, 241, 234, 0.95);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 4px 24px 0 rgba(152, 146, 128, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-  }
-  
-  .navbar__title {
-    font-size: 1.5rem;
-    margin-right: 0;
-    margin-bottom: 0;
-    grid-column: 2;
-    justify-self: center;
-  }
-  
-  .navbar__link {
-    font-size: 1rem;
-    padding: 8px 0;
-    transition: all 0.2s ease;
-  }
-  
-  .theme-toggle {
-    position: static;
-    font-size: 1.6rem;
-  }
-
-  .custom {
-    grid-column: 3;
-    justify-self: end;
-  }
-
-  #mobile-menu-toggle {
-    grid-column: 1;
-    justify-self: start;
-  }
-
-  .navbar__links {
-    grid-column: 1 / -1;
-    grid-row: 2;
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .navbar {
-    width: 70vw;
-    max-width: 320px;
-    padding: 4px 45px;
-    height: auto;
-    top: 15px;
-  }
-
   .imagelogo{
     height:10vh;
     width:16vw;
@@ -194,10 +102,6 @@
   
   .navbar__title {
     font-size: 1.3rem;
-  }
-  
-  .navbar__link {
-    font-size: 0.9rem;
   }
   
   .container {
@@ -296,6 +200,9 @@
   box-shadow: 0 4px 16px 0 #0003;
   cursor: pointer;
   transition: background 0.3s, color 0.3s, border 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
 .button--ai {
