@@ -157,58 +157,82 @@
             background: #cbd5e1;
         }
 
-        /* Mobile navigation overlay */
+        /* --- UPDATED MOBILE MENU STYLES START --- */
         .mobile-nav-overlay {
-            display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background: rgba(10, 10, 10, 0.5); /* Darker, less opaque background */
+            backdrop-filter: blur(15px); /* Increased blur effect */
+            -webkit-backdrop-filter: blur(15px);
             z-index: 1001;
             opacity: 0;
-            transition: all 0.3s ease;
+            visibility: hidden; /* Use visibility for transitions */
+            pointer-events: none; /* Prevent clicks when hidden */
+            transition: opacity 0.4s ease, visibility 0.4s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .mobile-nav-overlay.active {
-            display: flex;
             opacity: 1;
+            visibility: visible;
+            pointer-events: auto; /* Allow clicks when visible */
         }
 
         .mobile-nav-content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            width: 100%;
-            height: 100%;
-            gap: 30px;
+            gap: 25px; /* Adjusted gap for a cleaner look */
         }
 
         .mobile-nav-link {
             color: #f4f1ea;
             text-decoration: none;
             font-size: 2rem;
-            font-weight: 600;
+            font-weight: 500; /* Slightly lighter font weight */
             padding: 15px 30px;
-            border-radius: 50px;
-            background: rgba(244, 241, 234, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-            min-width: 200px;
+            border-radius: 12px; /* A more modern, subtle border-radius */
+            background: rgba(255, 255, 255, 0.05); /* More transparent background */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            min-width: 250px; /* Wider links for easier tapping */
             text-align: center;
+            opacity: 0; /* Initially hidden for animation */
+            transform: translateY(20px); /* Initial position for animation */
+            transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
         }
 
-        .mobile-nav-link:hover {
-            background: rgba(244, 241, 234, 0.2);
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        .mobile-nav-overlay.active .mobile-nav-link {
+            opacity: 1;
+            transform: translateY(0); /* Final position */
         }
+
+        /* Staggered animation for each link */
+        .mobile-nav-overlay.active .mobile-nav-link:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+        .mobile-nav-overlay.active .mobile-nav-link:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+        .mobile-nav-overlay.active .mobile-nav-link:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+        .mobile-nav-overlay.active .mobile-nav-link:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        .mobile-nav-link:hover, .mobile-nav-link:focus {
+            background: rgba(255, 255, 255, 0.15); /* Brighter background on hover */
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.03); /* Subtle scale effect on hover */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        /* --- UPDATED MOBILE MENU STYLES END --- */
+
 
         /* Prevent body scroll when mobile menu is open */
         .no-scroll {
@@ -241,6 +265,7 @@
             .brand {
                 top: 10px;
                 left: 10px;
+                position: absolute;
             }
             
             .theme-toggle-floating {
