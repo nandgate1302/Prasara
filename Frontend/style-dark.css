@@ -816,37 +816,46 @@
   letter-spacing: 0.2px;
 }
 
+/* UPDATED block from collaborator */
 @media (max-width: 768px) {
   .our-commitment {
-    margin-top: 5vh;
-    padding: 0 3vw;
+    margin-top: 5vh; /* shrink top margin */
+    padding: 0 3vw !important;
   }
 
   .our-commitment h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    
   }
 
-  .our-commitment>p {
+  .our-commitment > p {
     font-size: 1rem;
-    margin-bottom: 2vh;
+    margin-bottom: 2vh; 
+  
+
   }
 
-  .oc-content {
-    flex-direction: column;
-    gap: 8px;
-  }
+.oc-content {
+  align-items: flex-start !important;  /* prevent stretch */
+  justify-content: flex-start !important;
+  gap: 50px !important;                  /* no flex gap */
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
-  .oc-content-left {
-    margin-bottom: 5px;
-  }
+.oc-content-left,
+.oc-content-right {
+  display: flex;                      /* make them fit content tightly */
+  flex-direction: column;             
+  justify-content: flex-start;        
+  align-items: flex-start;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;            /* remove any forced height */
+  min-height: 0 !important;           /* reset any inherited min-height */
+}
 
-  .oc-content-left,
-  .oc-content-right {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
 
   .oc-content h3 {
     font-size: 1.2rem;
@@ -855,13 +864,78 @@
 
   .oc-content p {
     font-size: 0.95rem;
-    margin: 3px 0;
+    margin: 3px 0; 
     line-height: 1.5;
   }
 
   .empty {
-    height: 25vh;
+    height: 25vh; 
     margin-bottom: 2vh;
+  }
+}
+
+/* UPDATED block from collaborator */
+@media (max-width: 600px) {
+  .our-commitment {
+    padding: 0 3vw;
+  }
+  
+  .our-commitment h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .our-commitment > p {
+    font-size: 1.1rem;
+    margin-bottom: 4vh;
+  }
+  
+  .empty {
+    height: 34vh;
+    width: 90vw;
+    padding:5px;
+  }
+  
+  .oc-content {
+    padding: 0 3vw;
+    gap: 25px;
+  }
+  
+  .oc-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .oc-content p {
+    font-size: 1rem;
+  }
+}
+
+/* UPDATED block from collaborator */
+@media (max-width: 480px) {
+  .our-commitment h1 {
+    font-size: 2.2rem;
+    color: #fff;
+  }
+  
+  .our-commitment > p {
+    font-size: 1.1rem;
+    
+  }
+  
+  .empty {
+    height: 30vh;
+  }
+  
+  .oc-content {
+    padding: 0 2vw;
+  }
+  .oc-content h3 {
+    font-size: 1.6rem;
+    margin: 5px 0;
+  }
+  .oc-content p {
+    font-size: 1.1rem;
+    margin: 5px 0;
   }
 }
 
@@ -1430,6 +1504,7 @@
   }
 }
 
+/* KEPT original Kickstart AI form styles */
 #kickstart-form-status {
   text-align: left;
   line-height: 1.6;
