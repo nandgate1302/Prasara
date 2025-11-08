@@ -1,4 +1,3 @@
-
 :root {
   --footer-bg: linear-gradient(180deg, #fbf7ef 0%, #f0e6cc 100%);
   --footer-border: rgba(0,0,0,0.06);
@@ -55,13 +54,13 @@
 
 
 
-.imagelogo{
-  height:12vh;
-  width:8vw;
+.imagelogo {
+  height: 12vh;
+  width: 8vw;
   margin-right: 0px !important;
 }
 
-.brand{
+.brand {
   display: flex;
   align-items: center;
   gap: 2px;
@@ -76,34 +75,34 @@
 
 /* Mobile navigation styles */
 @media (max-width: 768px) {
-  .imagelogo{
-    height:12vh;
-    width:16vw;
+  .imagelogo {
+    height: 12vh;
+    width: 16vw;
     margin-right: 0px !important;
   }
-  
-  .brand{
+
+  .brand {
     display: flex;
     align-items: center;
     gap: 1px;
   }
-  
+
   .navbar {
     display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .imagelogo{
-    height:10vh;
-    width:16vw;
+  .imagelogo {
+    height: 10vh;
+    width: 16vw;
     margin-right: 0px !important;
   }
-  
+
   .navbar__title {
     font-size: 1.3rem;
   }
-  
+
   .container {
     padding-top: 140px;
   }
@@ -163,14 +162,14 @@
   font-size: 6rem;
   margin-top: -10px;
   margin-bottom: 5px;
-  color:#292421;
+  color: #292421;
   letter-spacing: 1.2px;
   line-height: 1.12;
 }
 
 .hero__desc {
   font-size: 1.5rem;
-  color:#5e5a52;
+  color: #5e5a52;
   margin-bottom: 20px;
   text-align: center;
   letter-spacing: 0.3px;
@@ -211,8 +210,9 @@
 }
 
 .button--ai:hover {
- 
-  background: linear-gradient(180deg, #e3dc92, #e6da8e);;
+
+  background: linear-gradient(180deg, #e3dc92, #e6da8e);
+  ;
   color: #4f4f40;
   box-shadow: 0 6px 20px 0 #0005;
 }
@@ -236,8 +236,9 @@
 }
 
 .button--services:hover {
- 
-   background: linear-gradient(180deg, #e3dc92, #e6da8e);;
+
+  background: linear-gradient(180deg, #e3dc92, #e6da8e);
+  ;
   color: #4f4f40;
   box-shadow: 0 6px 20px 0 rgba(242, 202, 121, 0.333);
 }
@@ -485,43 +486,43 @@
     font-size: 1.8rem;
     padding: 0 10px;
   }
-  
+
   .hero__desc {
     font-size: 0.9rem;
     padding: 0 15px;
   }
-  
+
   .firsth__subtitle {
     font-size: 0.85rem;
     padding: 8px 10px;
   }
-  
+
   .button--ai,
   .button--services {
     width: 85vw;
     font-size: 0.9rem;
     padding: 10px 0;
   }
-  
+
   .section-title {
     font-size: 1.6rem;
   }
-  
+
   .section-desc {
     font-size: 0.9rem;
     padding: 0 10px;
   }
-  
+
   .pillar-card {
     width: 85vw;
     padding: 15px 8px;
     min-height: 280px;
   }
-  
+
   .pillar-card__title {
     font-size: 1.1rem;
   }
-  
+
   .pillar-card__desc {
     font-size: 0.85rem;
   }
@@ -540,6 +541,7 @@
   background: none;
 
 }
+
 .our-mission .left-content {
   flex: 1 1 0;
   max-width: 48%;
@@ -548,6 +550,7 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .our-mission .right-content {
   flex: 1 1 0;
   max-width: 48%;
@@ -559,6 +562,7 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .our-mission h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -567,6 +571,7 @@
   line-height: 1.18;
   letter-spacing: 0.5px;
 }
+
 .our-mission p {
   font-size: 1.15rem;
   color: #787876;
@@ -574,10 +579,11 @@
   line-height: 1.7;
   letter-spacing: 0.1px;
 }
+
 .om {
   width: 200px;
   height: 60px;
-   background: linear-gradient(180deg, #c67e32, #c59d3f);
+  background: linear-gradient(180deg, #c67e32, #c59d3f);
   color: #fff;
   font-size: 1.05rem;
   font-weight: 600;
@@ -593,11 +599,13 @@
   letter-spacing: 0.5px;
 }
 
-.left-content{
+.left-content {
   margin-top: 8vh;
 }
+
 .om:hover {
- background: linear-gradient(180deg, #e3dc92, #e6da8e);;
+  background: linear-gradient(180deg, #e3dc92, #e6da8e);
+  ;
   color: #4f4f40;
 }
 
@@ -608,10 +616,13 @@
     min-height: unset;
     margin: 40px 0 0 0;
   }
-  .our-mission .left-content, .our-mission .right-content {
+
+  .our-mission .left-content,
+  .our-mission .right-content {
     max-width: 100%;
     padding: 0 4vw;
   }
+
   .our-mission .right-content {
     border-left: none;
     border-top: 3px solid #ab8244;
@@ -619,11 +630,13 @@
     margin-top: 32px;
     padding-top: 24px;
   }
+
   .our-mission h1 {
     font-size: 1.5rem;
     margin: 24px 0 12px 0;
     line-height: 1.22;
   }
+
   .our-mission p {
     font-size: 1rem;
     line-height: 1.6;
@@ -653,7 +666,7 @@
 }
 
 .values-btn {
-   background: linear-gradient(180deg, #c67e32, #c59d3f);
+  background: linear-gradient(180deg, #c67e32, #c59d3f);
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
@@ -669,7 +682,8 @@
 }
 
 .values-btn:hover {
-  background: linear-gradient(180deg, #e3dc92, #e6da8e);;
+  background: linear-gradient(180deg, #e3dc92, #e6da8e);
+  ;
   color: #4f4f40;
 }
 
@@ -677,7 +691,7 @@
   font-size: 2.2rem;
   font-weight: bold;
   margin: 18px 0 12px 0;
-    color: #2a2929;
+  color: #2a2929;
   line-height: 1.22;
   letter-spacing: 0.5px;
 }
@@ -745,11 +759,14 @@
     flex-direction: column;
     align-items: stretch;
   }
-  .our-values .left-content, .values-grid {
+
+  .our-values .left-content,
+  .values-grid {
     max-width: 100%;
     padding: 0 4vw;
     margin-bottom: 20px;
   }
+
   .values-grid {
     grid-template-columns: 1fr;
     gap: 24px 0;
@@ -761,29 +778,29 @@
     margin: 50px 0 40px 0;
     padding: 0 3vw;
   }
-  
+
   .our-values .left-content h1 {
     font-size: 1.6rem;
     margin: 15px 0 10px 0;
   }
-  
+
   .our-values .left-content p {
     font-size: 0.95rem;
   }
-  
+
   .values-btn {
     font-size: 0.9rem;
     padding: 8px 20px;
   }
-  
+
   .value-card h2 {
     font-size: 1.4rem;
   }
-  
+
   .value-card p {
     font-size: 0.95rem;
   }
-  
+
   .value-icon {
     font-size: 1.8rem;
   }
@@ -793,19 +810,19 @@
   .our-values {
     padding: 0 2vw;
   }
-  
+
   .our-values .left-content h1 {
     font-size: 1.4rem;
   }
-  
+
   .our-values .left-content p {
     font-size: 0.85rem;
   }
-  
+
   .value-card h2 {
     font-size: 1.2rem;
   }
-  
+
   .value-card p {
     font-size: 0.85rem;
   }
@@ -829,7 +846,7 @@
   color: #1a1a19;
 }
 
-.our-commitment > p {
+.our-commitment>p {
   font-size: 1.25rem;
   max-width: 900px;
   color: #4a4949;
@@ -841,8 +858,9 @@
 .empty {
   height: 60vh;
   width: 80vw;
-  background-color: #b4b3b3;;
-  
+  background-color: #b4b3b3;
+  ;
+
   border-radius: 20px;
   margin-bottom: 4vh;
 }
@@ -879,37 +897,46 @@
   letter-spacing: 0.2px;
 }
 
+/* UPDATED block from collaborator */
 @media (max-width: 768px) {
   .our-commitment {
     margin-top: 5vh; /* shrink top margin */
-    padding: 0 3vw;
+    padding: 0 3vw !important;
   }
 
   .our-commitment h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    
   }
 
   .our-commitment > p {
     font-size: 1rem;
     margin-bottom: 2vh; 
+  
+
   }
 
-  .oc-content {
-    flex-direction: column;
-    gap: 8px;
-  }
+.oc-content {
+  align-items: flex-start !important;  /* prevent stretch */
+  justify-content: flex-start !important;
+  gap: 50px !important;                  /* no flex gap */
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
-  .oc-content-left {
-    margin-bottom: 5px;
-  }
+.oc-content-left,
+.oc-content-right {
+  display: flex;                      /* make them fit content tightly */
+  flex-direction: column;             
+  justify-content: flex-start;        
+  align-items: flex-start;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;            /* remove any forced height */
+  min-height: 0 !important;           /* reset any inherited min-height */
+}
 
-  .oc-content-left,
-  .oc-content-right {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
 
   .oc-content h3 {
     font-size: 1.2rem;
@@ -932,31 +959,31 @@
   .our-commitment {
     padding: 0 3vw;
   }
-  
+
   .our-commitment h1 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
   }
-  
-  .our-commitment > p {
+
+  .our-commitment>p {
     font-size: 0.9rem;
     margin-bottom: 4vh;
   }
-  
+
   .empty {
     height: 35vh;
     width: 95vw;
   }
-  
+
   .oc-content {
     padding: 0 3vw;
     gap: 25px;
   }
-  
+
   .oc-content h3 {
     font-size: 1.1rem;
   }
-  
+
   .oc-content p {
     font-size: 0.9rem;
   }
@@ -966,15 +993,15 @@
   .our-commitment h1 {
     font-size: 1.4rem;
   }
-  
-  .our-commitment > p {
+
+  .our-commitment>p {
     font-size: 0.85rem;
   }
-  
+
   .empty {
     height: 30vh;
   }
-  
+
   .oc-content {
     padding: 0 2vw;
   }
@@ -990,13 +1017,13 @@
 .kickstart-tag {
   height: 7vh;
   width: 30vh;
-  cursor:pointer;
+  cursor: pointer;
   background: linear-gradient(180deg, #c67e32, #c59d3f);
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
   border-radius: 20px;
-  border: 0px ;
+  border: 0px;
   margin-bottom: 20px;
 
   cursor: default;
@@ -1041,7 +1068,7 @@
 
 .kickstart-form input,
 .kickstart-form textarea {
-  background:linear-gradient(145deg, #f1ede5, #f5e2c5 80%);
+  background: linear-gradient(145deg, #f1ede5, #f5e2c5 80%);
   border: 2px solid #f9cb8a;
   border-radius: 8px;
   color: #2d2c2c;
@@ -1075,7 +1102,8 @@
 }
 
 .kickstart-submit:hover {
-  background: linear-gradient(180deg, #e3dc92, #e6da8e);;
+  background: linear-gradient(180deg, #e3dc92, #e6da8e);
+  ;
   color: #4f4f40;
 }
 
@@ -1099,36 +1127,36 @@
   .kickstart-section {
     padding: 0 2vw;
   }
-  
+
   .kickstart-title {
     font-size: 1.3rem;
   }
-  
+
   .kickstart-subtitle {
     font-size: 0.9rem;
     padding: 0 5px;
   }
-  
+
   .kickstart-form {
     padding: 25px 15px;
     max-width: 98vw;
   }
-  
+
   .kickstart-form label {
     font-size: 0.95rem;
   }
-  
+
   .kickstart-form input,
   .kickstart-form textarea {
     font-size: 0.9rem;
     padding: 10px 12px;
   }
-  
+
   .kickstart-submit {
     font-size: 1rem;
     padding: 10px;
   }
-  
+
   .kickstart-tag {
     width: 25vh;
     height: 10vh;
@@ -1157,7 +1185,7 @@
 }
 
 .contact-card {
-    background: #f4eeee;
+  background: #f4eeee;
   border-radius: 20px;
   padding: 50px 50px;
   max-width: 720px;
@@ -1187,9 +1215,9 @@
 
 .contact-form input,
 .contact-form textarea {
-  background:linear-gradient(145deg, #f1ede5, #f5e2c5 80%);
+  background: linear-gradient(145deg, #f1ede5, #f5e2c5 80%);
   border: 2px solid #f9cb8a;
-  
+
   border-radius: 8px;
   padding: 14px 18px;
   color: #3d3c3c;
@@ -1211,7 +1239,7 @@
   margin-top: 10px;
   background: linear-gradient(180deg, #c67e32, #c59d3f);
   color: #fff;
- 
+
   font-weight: 600;
   font-size: 1.1rem;
   padding: 14px;
@@ -1222,7 +1250,8 @@
 }
 
 .contact-submit:hover {
-  background: linear-gradient(180deg, #e3dc92, #e6da8e);;
+  background: linear-gradient(180deg, #e3dc92, #e6da8e);
+  ;
   color: #4f4f40;
 }
 
@@ -1256,35 +1285,35 @@
     width: 100%;
     padding: 0 3vw;
   }
-  
+
   .contact-heading {
     font-size: 1.8rem;
   }
-  
+
   .contact-subheading {
     font-size: 0.9rem;
     padding: 0 5px;
   }
-  
+
   .contact-card {
     padding: 30px 20px;
     max-width: 98vw;
   }
-  
+
   .contact-title {
     font-size: 1.4rem;
   }
-  
+
   .contact-info {
     font-size: 0.9rem;
   }
-  
+
   .contact-form input,
   .contact-form textarea {
     font-size: 0.9rem;
     padding: 12px 14px;
   }
-  
+
   .contact-submit {
     font-size: 1rem;
     padding: 12px;
@@ -1295,23 +1324,23 @@
   .contact-section {
     padding: 0 2vw;
   }
-  
+
   .contact-heading {
     font-size: 1.6rem;
   }
-  
+
   .contact-subheading {
     font-size: 0.85rem;
   }
-  
+
   .contact-card {
     padding: 25px 15px;
   }
-  
+
   .contact-title {
     font-size: 1.3rem;
   }
-  
+
   .contact-info {
     font-size: 0.85rem;
   }
@@ -1322,25 +1351,25 @@
   .hero__title {
     font-size: 1.5rem;
   }
-  
+
   .hero__desc {
     font-size: 0.8rem;
   }
-  
+
   .section-title {
     font-size: 1.4rem;
   }
-  
+
   .pillar-card {
     width: 90vw;
     padding: 12px 6px;
   }
-  
+
   .kickstart-form,
   .contact-card {
     padding: 20px 10px;
   }
-  
+
   .button--ai,
   .button--services {
     width: 90vw;
@@ -1354,17 +1383,17 @@
     margin-top: 20px;
     margin-bottom: 40px;
   }
-  
+
   .firsth__subtitle {
     margin-top: 20px;
   }
-  
+
   .our-mission,
   .our-values,
   .our-commitment {
     margin: 30px 0;
   }
-  
+
   .empty {
     height: 25vh;
   }
@@ -1375,29 +1404,29 @@
   .hero__title {
     font-size: 4rem;
   }
-  
+
   .hero__desc {
     font-size: 1.3rem;
   }
-  
+
   .section-title {
     font-size: 3rem;
   }
-  
+
   .pillar-card {
     width: 45vw;
     min-width: 300px;
   }
-  
+
   .our-mission h1,
   .our-values .left-content h1 {
     font-size: 2rem;
   }
-  
+
   .our-commitment h1 {
     font-size: 2.8rem;
   }
-  
+
   .contact-section {
     width: 100%;
     padding: 0 5vw;
@@ -1585,4 +1614,52 @@
   .footer-brand {
     font-size: 1.15rem;
   }
+}
+
+/* KEPT original Kickstart AI form styles */
+#kickstart-form-status {
+  text-align: left;
+  line-height: 1.6;
+  margin-top: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  color: #2b2b27;
+  ;
+}
+
+.prasara-body.dark #kickstart-form-status {
+  color: #2b2b27;
+}
+
+
+.prasara-body.dark #kickstart-form-status.form-status-success {
+  color: #2b2b27 !important;
+}
+
+.prasara-body.light #kickstart-form-status.form-status-success {
+  color: #2b2b27 !important;
+}
+
+#kickstart-form-status.form-status-error {
+  color: #e74c3c !important;
+}
+
+.prasara-body.dark #kickstart-form-status.form-status-error {
+  color: #ff4d4d !important;
+}
+
+#kickstart-form-status h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#kickstart-form-status ul,
+#kickstart-form-status ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+#kickstart-form-status strong {
+  font-weight: 700;
 }
