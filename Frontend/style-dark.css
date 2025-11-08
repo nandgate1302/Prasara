@@ -1,20 +1,24 @@
 /* --- Keyframes for a more sophisticated background animation --- */
 @keyframes animated-gradient-flow {
-    0% {
-        background-position: 0% 0%;
-    }
-    25% {
-        background-position: 100% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    75% {
-        background-position: 0% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
+  0% {
+    background-position: 0% 0%;
+  }
+
+  25% {
+    background-position: 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 
@@ -88,12 +92,14 @@
   width: auto;
   max-width: 90vw;
 }
-.imagelogo{
-  height:12vh;
-  width:8vw;
+
+.imagelogo {
+  height: 12vh;
+  width: 8vw;
   margin-right: 0px !important;
 }
-.brand{
+
+.brand {
   display: flex;
   align-items: center;
   gap: 2px;
@@ -109,18 +115,18 @@
 
 /* Mobile navigation styles */
 @media (max-width: 768px) {
-  .imagelogo{
-    height:12vh;
-    width:16vw;
+  .imagelogo {
+    height: 12vh;
+    width: 16vw;
     margin-right: 0px !important;
   }
-  
-  .brand{
+
+  .brand {
     display: flex;
     align-items: center;
     gap: 1px;
   }
-  
+
   .navbar {
     display: none;
   }
@@ -1424,3 +1430,49 @@
   }
 }
 
+#kickstart-form-status {
+  text-align: left;
+  line-height: 1.6;
+  margin-top: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  color: #e6eef5;
+  ;
+}
+
+.prasara-body.dark #kickstart-form-status {
+  color: #e6eef5;
+}
+
+
+.prasara-body.dark #kickstart-form-status.form-status-success {
+  color: #e6eef5 !important;
+}
+
+.prasara-body.light #kickstart-form-status.form-status-success {
+  color: #e6eef5 !important;
+}
+
+#kickstart-form-status.form-status-error {
+  color: #e74c3c !important;
+}
+
+.prasara-body.dark #kickstart-form-status.form-status-error {
+  color: #ff4d4d !important;
+}
+
+#kickstart-form-status h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#kickstart-form-status ul,
+#kickstart-form-status ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+#kickstart-form-status strong {
+  font-weight: 700;
+}
