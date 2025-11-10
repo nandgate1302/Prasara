@@ -1,20 +1,24 @@
 /* --- Keyframes for a more sophisticated background animation --- */
 @keyframes animated-gradient-flow {
-    0% {
-        background-position: 0% 0%;
-    }
-    25% {
-        background-position: 100% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    75% {
-        background-position: 0% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
+  0% {
+    background-position: 0% 0%;
+  }
+
+  25% {
+    background-position: 100% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 
@@ -88,12 +92,14 @@
   width: auto;
   max-width: 90vw;
 }
-.imagelogo{
-  height:12vh;
-  width:8vw;
+
+.imagelogo {
+  height: 12vh;
+  width: 8vw;
   margin-right: 0px !important;
 }
-.brand{
+
+.brand {
   display: flex;
   align-items: center;
   gap: 2px;
@@ -109,18 +115,18 @@
 
 /* Mobile navigation styles */
 @media (max-width: 768px) {
-  .imagelogo{
-    height:12vh;
-    width:16vw;
+  .imagelogo {
+    height: 12vh;
+    width: 16vw;
     margin-right: 0px !important;
   }
-  
-  .brand{
+
+  .brand {
     display: flex;
     align-items: center;
     gap: 1px;
   }
-  
+
   .navbar {
     display: none;
   }
@@ -810,37 +816,46 @@
   letter-spacing: 0.2px;
 }
 
+/* UPDATED block from collaborator */
 @media (max-width: 768px) {
   .our-commitment {
-    margin-top: 5vh;
-    padding: 0 3vw;
+    margin-top: 5vh; /* shrink top margin */
+    padding: 0 3vw !important;
   }
 
   .our-commitment h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    
   }
 
-  .our-commitment>p {
+  .our-commitment > p {
     font-size: 1rem;
-    margin-bottom: 2vh;
+    margin-bottom: 2vh; 
+  
+
   }
 
-  .oc-content {
-    flex-direction: column;
-    gap: 8px;
-  }
+.oc-content {
+  align-items: flex-start !important;  /* prevent stretch */
+  justify-content: flex-start !important;
+  gap: 50px !important;                  /* no flex gap */
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
-  .oc-content-left {
-    margin-bottom: 5px;
-  }
+.oc-content-left,
+.oc-content-right {
+  display: flex;                      /* make them fit content tightly */
+  flex-direction: column;             
+  justify-content: flex-start;        
+  align-items: flex-start;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;            /* remove any forced height */
+  min-height: 0 !important;           /* reset any inherited min-height */
+}
 
-  .oc-content-left,
-  .oc-content-right {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
 
   .oc-content h3 {
     font-size: 1.2rem;
@@ -849,13 +864,78 @@
 
   .oc-content p {
     font-size: 0.95rem;
-    margin: 3px 0;
+    margin: 3px 0; 
     line-height: 1.5;
   }
 
   .empty {
-    height: 25vh;
+    height: 25vh; 
     margin-bottom: 2vh;
+  }
+}
+
+/* UPDATED block from collaborator */
+@media (max-width: 600px) {
+  .our-commitment {
+    padding: 0 3vw;
+  }
+  
+  .our-commitment h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .our-commitment > p {
+    font-size: 1.1rem;
+    margin-bottom: 4vh;
+  }
+  
+  .empty {
+    height: 34vh;
+    width: 90vw;
+    padding:5px;
+  }
+  
+  .oc-content {
+    padding: 0 3vw;
+    gap: 25px;
+  }
+  
+  .oc-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .oc-content p {
+    font-size: 1rem;
+  }
+}
+
+/* UPDATED block from collaborator */
+@media (max-width: 480px) {
+  .our-commitment h1 {
+    font-size: 2.2rem;
+    color: #fff;
+  }
+  
+  .our-commitment > p {
+    font-size: 1.1rem;
+    
+  }
+  
+  .empty {
+    height: 30vh;
+  }
+  
+  .oc-content {
+    padding: 0 2vw;
+  }
+  .oc-content h3 {
+    font-size: 1.6rem;
+    margin: 5px 0;
+  }
+  .oc-content p {
+    font-size: 1.1rem;
+    margin: 5px 0;
   }
 }
 
@@ -1424,3 +1504,50 @@
   }
 }
 
+/* KEPT original Kickstart AI form styles */
+#kickstart-form-status {
+  text-align: left;
+  line-height: 1.6;
+  margin-top: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  color: #e6eef5;
+  ;
+}
+
+.prasara-body.dark #kickstart-form-status {
+  color: #e6eef5;
+}
+
+
+.prasara-body.dark #kickstart-form-status.form-status-success {
+  color: #e6eef5 !important;
+}
+
+.prasara-body.light #kickstart-form-status.form-status-success {
+  color: #e6eef5 !important;
+}
+
+#kickstart-form-status.form-status-error {
+  color: #e74c3c !important;
+}
+
+.prasara-body.dark #kickstart-form-status.form-status-error {
+  color: #ff4d4d !important;
+}
+
+#kickstart-form-status h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#kickstart-form-status ul,
+#kickstart-form-status ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+#kickstart-form-status strong {
+  font-weight: 700;
+}

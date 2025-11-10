@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prasara Home</title>
     <link id="theme-stylesheet" rel="stylesheet" href="style-light.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <style>
         body {
             transition: background 0.4s ease, color 0.4s ease;
@@ -58,15 +61,16 @@
             background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23cbd5e1" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>') no-repeat center/cover;
         }
 
-        /* Brand positioning */
+        /* Brand positioning - UPDATED */
         .brand {
-            position: fixed;
+            position: absolute; /* Changed from fixed */
             top: 20px;
             left: 20px;
             z-index: 1001;
             display: flex;
             align-items: center;
             gap: 10px;
+            margin-right: 8px; /* Added from collaborator */
         }
 
         /* Theme toggle floating positioning */
@@ -164,13 +168,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 10, 10, 0.5); /* Darker, less opaque background */
-            backdrop-filter: blur(15px); /* Increased blur effect */
+            background: rgba(10, 10, 10, 0.5);
+            /* Darker, less opaque background */
+            backdrop-filter: blur(15px);
+            /* Increased blur effect */
             -webkit-backdrop-filter: blur(15px);
             z-index: 1001;
             opacity: 0;
-            visibility: hidden; /* Use visibility for transitions */
-            pointer-events: none; /* Prevent clicks when hidden */
+            visibility: hidden;
+            /* Use visibility for transitions */
+            pointer-events: none;
+            /* Prevent clicks when hidden */
             transition: opacity 0.4s ease, visibility 0.4s;
             display: flex;
             justify-content: center;
@@ -180,57 +188,73 @@
         .mobile-nav-overlay.active {
             opacity: 1;
             visibility: visible;
-            pointer-events: auto; /* Allow clicks when visible */
+            pointer-events: auto;
+            /* Allow clicks when visible */
         }
 
         .mobile-nav-content {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 25px; /* Adjusted gap for a cleaner look */
+            gap: 25px;
+            /* Adjusted gap for a cleaner look */
         }
 
         .mobile-nav-link {
             color: #f4f1ea;
             text-decoration: none;
             font-size: 2rem;
-            font-weight: 500; /* Slightly lighter font weight */
+            font-weight: 500;
+            /* Slightly lighter font weight */
             padding: 15px 30px;
-            border-radius: 12px; /* A more modern, subtle border-radius */
-            background: rgba(255, 255, 255, 0.05); /* More transparent background */
+            border-radius: 12px;
+            /* A more modern, subtle border-radius */
+            background: rgba(255, 255, 255, 0.05);
+            /* More transparent background */
             border: 1px solid rgba(255, 255, 255, 0.15);
-            min-width: 250px; /* Wider links for easier tapping */
+            min-width: 250px;
+            /* Wider links for easier tapping */
             text-align: center;
-            opacity: 0; /* Initially hidden for animation */
-            transform: translateY(20px); /* Initial position for animation */
+            opacity: 0;
+            /* Initially hidden for animation */
+            transform: translateY(20px);
+            /* Initial position for animation */
             transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
         }
 
         .mobile-nav-overlay.active .mobile-nav-link {
             opacity: 1;
-            transform: translateY(0); /* Final position */
+            transform: translateY(0);
+            /* Final position */
         }
 
         /* Staggered animation for each link */
         .mobile-nav-overlay.active .mobile-nav-link:nth-child(1) {
             transition-delay: 0.1s;
         }
+
         .mobile-nav-overlay.active .mobile-nav-link:nth-child(2) {
             transition-delay: 0.2s;
         }
+
         .mobile-nav-overlay.active .mobile-nav-link:nth-child(3) {
             transition-delay: 0.3s;
         }
+
         .mobile-nav-overlay.active .mobile-nav-link:nth-child(4) {
             transition-delay: 0.4s;
         }
 
-        .mobile-nav-link:hover, .mobile-nav-link:focus {
-            background: rgba(255, 255, 255, 0.15); /* Brighter background on hover */
+        .mobile-nav-link:hover,
+        .mobile-nav-link:focus {
+            background: rgba(255, 255, 255, 0.15);
+            /* Brighter background on hover */
             border-color: rgba(255, 255, 255, 0.3);
-            transform: scale(1.03); /* Subtle scale effect on hover */
+            transform: scale(1.03);
+            /* Subtle scale effect on hover */
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
+
         /* --- UPDATED MOBILE MENU STYLES END --- */
 
 
@@ -244,8 +268,9 @@
             .brand {
                 top: 15px;
                 left: 15px;
+                display: none; /* UPDATED */
             }
-            
+
             .theme-toggle-floating {
                 bottom: 20px;
                 right: 20px;
@@ -259,6 +284,11 @@
             .navbar {
                 display: none;
             }
+
+            /* NEW class from collaborator */
+            .space-bottom-ins{
+                margin-bottom: 5px !important;
+            }
         }
 
         @media (max-width: 480px) {
@@ -267,7 +297,7 @@
                 left: 10px;
                 position: absolute;
             }
-            
+
             .theme-toggle-floating {
                 bottom: 15px;
                 right: 15px;
@@ -287,42 +317,46 @@
                 padding: 12px 25px;
             }
         }
+
+        /* NEW rule from collaborator */
+        @media (min-width: 768px) and (max-width: 900px) {
+            .brand {
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body class="prasara-body">
     <div class="container">
-        <!-- Brand moved to top left -->
-        <div class="brand"> 
-            <img class="imagelogo" src="/Images/Prasara Logo.png">
-            <span class="navbar__title">Prasara</span>
-        </div>
+        <div class="overlappingEle">
+            <div class="brand">
+                <img class="imagelogo" src="Images/Prasara Logo.png">
+                <span class="navbar__title">Prasara</span>
+            </div>
 
-        <!-- Mobile hamburger toggle -->
-        <div class="mobile-nav-toggle" id="mobile-nav-toggle">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </div>
+            <div class="mobile-nav-toggle" id="mobile-nav-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
 
-        <!-- Theme toggle moved to bottom right as floating element -->
-        <div class="theme-toggle-floating">
-            <button class="theme-toggle" id="theme-toggle-btn" title="Toggle dark/light mode">
-                <span id="theme-icon" class="icon-moon"></span>
-            </button>
-        </div>
+            <div class="theme-toggle-floating">
+                <button class="theme-toggle" id="theme-toggle-btn" title="Toggle dark/light mode">
+                    <span id="theme-icon" class="icon-moon"></span>
+                </button>
+            </div>
 
-        <!-- Navbar now only contains navigation links -->
-        <div class="navbar" id="navbar">
-            <div class="navbar__links" id="navbar-links">
-                <a href="#services" class="navbar__link">Services</a>
-                <a href="#about" class="navbar__link">About</a>
-                <a href="#contact" class="navbar__link">Contact</a>
-                <a href="#kickstart" class="navbar__link">Kickstart AI</a>
+            <div class="navbar" id="navbar">
+                <div class="navbar__links" id="navbar-links">
+                    <a href="#services" class="navbar__link">Services</a>
+                    <a href="#about" class="navbar__link">About</a>
+                    <a href="#contact" class="navbar__link">Contact</a>
+                    <a href="#kickstart" class="navbar__link">Kickstart AI</a>
+                </div>
             </div>
         </div>
 
-        <!-- Mobile navigation overlay -->
         <div class="mobile-nav-overlay" id="mobile-nav-overlay">
             <div class="mobile-nav-content">
                 <a href="#services" class="mobile-nav-link">Services</a>
@@ -484,14 +518,14 @@
             <div class="oc-content">
                 <div class="oc-content-left">
                     <h3>Partners in Your Journey</h3>
-                    <p>We're dedicated partners, invested in your brand's journey. <br> We don't just innovate; we
+                    <p class="space-bottom-ins">We're dedicated partners, invested in your brand's journey. <br> We don't just innovate; we
                         ignite
                         your brand's path, helping it <br> dance on the digital waves and uplift its entire presence.
                     </p>
                 </div>
                 <div class="oc-content-right">
                     <h3>Democratizing Technology</h3>
-                    <p>We focus on Kerala's under-served local businesses. We <br> democratize advanced tech, putting
+                    <p class="space-bottom-ins">We focus on Kerala's under-served local businesses. We <br> democratize advanced tech, putting
                         powerful tools into local <br> heroes' hands, building a vibrant, inclusive digital economy.</p>
                 </div>
             </div>
@@ -502,7 +536,7 @@
             <p class="kickstart-subtitle">Not sure where to start? Tell us about your business. Our free AI will provide
                 an initial analysis and suggest how Prasara can help you grow.</p>
 
-            <form class="kickstart-form">
+            <form class="kickstart-form" id="kickstart-form">
                 <label for="biz-name">Business Name</label>
                 <input type="text" id="biz-name" placeholder="e.g., Kerala Spice Emporium" required>
 
@@ -518,7 +552,9 @@
                 <label for="goals">Marketing Goals</label>
                 <textarea id="goals" placeholder="What do you want to achieve with marketing?" required></textarea>
 
-                <button type="submit" class="kickstart-submit">Kickstart My Brand</button>
+                <button type="submit" class="kickstart-submit" id="kickstart-submit-btn">Kickstart My Brand</button>
+
+                <div id="kickstart-form-status"></div>
             </form>
         </div>
 
@@ -561,7 +597,6 @@
 
                 <div class="socials" aria-label="Social links">
                     <a class="social-btn" href="#" aria-label="Instagram">
-                        <!-- keep using your svg markup; this uses currentColor so it adapts -->
                         <svg width="26" height="26" viewBox="0 0 16 16" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">[...]</svg>
                     </a>
@@ -583,8 +618,74 @@
         </footer>
 
     </div>
+
     <script>
+        // --- MAIN DOM CONTENT LOADED LISTENER ---
         document.addEventListener('DOMContentLoaded', function () {
+
+            // --- 1. KICKSTART FORM HANDLER (KEPT) ---
+            const kickstartForm = document.getElementById('kickstart-form');
+            const submitButton = document.getElementById('kickstart-submit-btn');
+            const formStatus = document.getElementById('kickstart-form-status');
+
+            // This is your backend URL
+            // For local testing: 'http://localhost:3001'
+            // For deployment: 'https://your-app-name.onrender.com'
+            const backendApiUrl = 'http://localhost:3001/api/kickstart-submit';
+
+            if (kickstartForm) { // Check if the form exists before adding listener
+                kickstartForm.addEventListener('submit', async function (event) {
+                    event.preventDefault(); // Stop the page from reloading
+
+                    const formData = {
+                        "biz-name": document.getElementById('biz-name').value,
+                        "biz-desc": document.getElementById('biz-desc').value,
+                        "audience": document.getElementById('audience').value,
+                        "services": document.getElementById('services').value,
+                        "goals": document.getElementById('goals').value
+                    };
+
+                    // Show loading message and reset classes
+                    formStatus.textContent = 'Analyzing...';
+                    formStatus.classList.remove('form-status-success', 'form-status-error');
+                    submitButton.disabled = true;
+
+                    try {
+                        // Send data to your backend
+                        const response = await fetch(backendApiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(formData)
+                        });
+
+                        const result = await response.json();
+
+                        if (response.ok) {
+                            // --- THIS IS THE FIX ---
+                            const n8nMessage = result.n8nResponse || 'Analysis complete!';
+
+                            // Use marked.parse() to convert Markdown to HTML
+                            formStatus.innerHTML = marked.parse(n8nMessage);
+                            // Add success class (CSS will handle the color)
+                            formStatus.classList.add('form-status-success');
+                        } else {
+                            // Handle errors from the backend
+                            formStatus.textContent = result.message || 'An error occurred. Please try again.';
+                            formStatus.classList.add('form-status-error'); // Add error class
+                        }
+                    } catch (error) {
+                        // Handle network errors (backend is down)
+                        formStatus.textContent = 'Could not connect to the server. Please check your connection.';
+                        formStatus.classList.add('form-status-error'); // Add error class
+                        console.error('Fetch error:', error);
+                    } finally {
+                        // Re-enable the button
+                        submitButton.disabled = false;
+                    }
+                });
+            }
+
+            // --- 2. THEME AND MOBILE NAV HANDLERS (KEPT) ---
             const LIGHT_THEME = 'style-light.css';
             const DARK_THEME = 'style-dark.css';
             const themeStylesheet = document.getElementById('theme-stylesheet');
@@ -629,22 +730,19 @@
 
             if (mobileNavToggle && mobileNavOverlay && navLinks) {
                 mobileNavToggle.addEventListener('click', toggleMobileMenu);
-                
-                // Close menu when clicking on overlay background
-                mobileNavOverlay.addEventListener('click', function(e) {
+
+                mobileNavOverlay.addEventListener('click', function (e) {
                     if (e.target === this) {
                         toggleMobileMenu();
                     }
                 });
 
-                // Close menu when clicking on navigation links
                 mobileNavOverlay.querySelectorAll('.mobile-nav-link').forEach(function (link) {
                     link.addEventListener('click', function () {
                         toggleMobileMenu();
                     });
                 });
 
-                // Close menu on window resize
                 window.addEventListener('resize', function () {
                     if (window.innerWidth > 768) {
                         mobileNavToggle.classList.remove('active');
@@ -658,7 +756,6 @@
             const body = document.querySelector('.prasara-body');
             if (body) {
                 window.addEventListener('pointermove', (e) => {
-                    // Only apply effect if the dark theme is active
                     if (themeStylesheet.getAttribute('href').includes(DARK_THEME)) {
                         const { clientX, clientY } = e;
                         const x = Math.round((clientX / window.innerWidth) * 100);
@@ -670,11 +767,6 @@
             }
         });
     </script>
-
-
-
 </body>
 
 </html>
-
-
