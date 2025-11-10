@@ -1,10 +1,10 @@
 :root {
   --footer-bg: linear-gradient(180deg, #fbf7ef 0%, #f0e6cc 100%);
-  --footer-border: rgba(0, 0, 0, 0.06);
+  --footer-border: rgba(0,0,0,0.06);
   --footer-text: #2b2b27;
   --footer-muted: #6f6b64;
-  --footer-accent: #c67e32;
-  --footer-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --footer-accent: #c67e32; 
+  --footer-shadow: 0 8px 30px rgba(0,0,0,0.06);
 }
 
 .prasara-body {
@@ -912,7 +912,9 @@
 
   .our-commitment > p {
     font-size: 1rem;
-    margin-bottom: 2vh;
+    margin-bottom: 2vh; 
+  
+
   }
 
 .oc-content {
@@ -943,12 +945,12 @@
 
   .oc-content p {
     font-size: 0.95rem;
-    margin: 3px 0;
+    margin: 3px 0; 
     line-height: 1.5;
   }
 
   .empty {
-    height: 25vh;
+    height: 25vh; 
     margin-bottom: 2vh;
   }
 }
