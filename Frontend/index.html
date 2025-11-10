@@ -565,12 +565,13 @@
             <div class="contact-card">
                 <h3 class="contact-title">Contact Us</h3>
                 <p class="contact-info">Fill out the form below and we'll get back to you.</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" rows="5" required></textarea>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <textarea id="message" placeholder="Message" rows="5" required></textarea>
                     <button type="submit" class="contact-submit">Send Message</button>
                 </form>
+                <p id="Status"></p>
             </div>
         </div>
 
@@ -765,6 +766,31 @@
                     }
                 });
             }
+
+            //3. Contact form 
+            const form = document.getElementById("contactForm");
+            const status= document.getElementById("Status");
+            form.addEventListener("submit",async(e)=>{
+                e.preventDefault();
+                const data={
+                    name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    message: document.getElementById("message").value
+                };
+                try{
+                    const response= await fetch("http://localhost:3001/send",{
+                        method: "POST",
+                        headers: {"Content-Type":"application/json"},
+                        body: JSON.stringify(data)
+                    });
+                    
+                    const result=await response.json();
+                    status.innerText= result.message || result.server;
+                    form.reset();
+                } catch(err){
+                   status.innerText= "Error sending form";
+                }
+            });
         });
     </script>
 </body>
